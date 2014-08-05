@@ -1,0 +1,253 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * Mentions
+ * Base
+ * Layouts
+ * Form
+ * Message
+ * Table
+ */
+
+/*----------------------------------------------------------------------------*\
+    $MENTIONS
+\*----------------------------------------------------------------------------*/
+
+/* @autor : Julien Marciliac 
+/* @date :  july 2014
+/* @note: BEM syntax used
+/* @note: mobile first (INITAL / STATE)
+*/
+
+/*----------------------------------------------------------------------------*\
+    $BASE
+\*----------------------------------------------------------------------------*/
+
+body {
+    width:80%;
+    margin:auto;
+}
+
+/*----------------------------------------------------------------------------*\
+    $LAYOUTS
+\*----------------------------------------------------------------------------*/
+
+/*------------------------------------*\
+    $ LAYOUTS INITIAL
+\*------------------------------------*/
+
+/*-------------------------------*\
+  LAYOUTS INITIAL Container
+\*-------------------------------*/
+
+.layout-container{
+    width: 95%;  
+    margin: 0 auto; 
+}
+.layout-container__page{
+    max-width:1265px;    
+}
+
+/*-------------------------------*\
+   LAYOUTS INITIAL Header
+\*-------------------------------*/
+
+.header {
+    margin-top:1.8rem;
+    text-align:center;
+}
+
+.header h1 {
+    display:inline-block;
+    font-size:3rem;
+}
+
+
+.header__logo {
+    line-height: 4rem;
+    width:100%;
+}
+.header__menu {
+    line-height: 4rem; 
+    margin-bottom: 3rem;
+}
+.header__menu a {
+    display:block;
+    line-height: 2rem;
+    padding: 0 2% 0 2%;    
+}
+.header__menu a:hover {
+    color:#65CF9A;  
+}
+
+/*-------------------------------*\
+    $ LAYOUTS INITIAL Footer
+\*-------------------------------*/
+
+.footer {
+    background-color: #181818;
+    text-align:center;
+}
+.footer__content a {
+    line-height:2rem;
+    white-space:nowrap;    
+}
+.footer__content a:hover {
+    color:white;
+}
+.footer__content__blocks p {
+    color:#FFF;
+}
+.footer__content__blocks img {
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.footer .btn--type3{
+    font-size:1rem;
+    margin-top:2rem;
+}
+
+/*------------------------------------*\
+    $LAYOUTS STATE
+\*------------------------------------*/
+
+@media (min-width: 400px) {
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Header
+    \*-------------------------------*/     
+
+    .header__menu a {
+        display:inline-block;
+        line-height: 4rem;
+        padding: 0 2% 0 2%;    
+    }
+}
+@media (min-width: 768px) {
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Container
+    \*-------------------------------*/   
+
+    .layout-container{
+        width: 100%;
+    }
+    .layout-container__page{
+        display:inline-block;
+        width:77%;
+    }
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Header
+    \*-------------------------------*/     
+
+    .header__logo {
+        display:inline-block;
+    }
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Footer
+    \*-------------------------------*/   
+
+    .footer__content__blocks {
+        display:inline-block;
+        width:24%;
+        vertical-align:top;
+        text-align:left;
+    }
+    .footer__content__blocks a {
+        display:block;
+        font-size: 0.8rem;        
+    }
+    .footer__content__blocks .btn--type3 {
+        margin-top:0;
+    } 
+}
+
+/*------------------------------------*\
+    FORM
+\*------------------------------------*/
+
+
+form {
+    padding:10px;
+    width:500px;
+    margin:auto;
+}
+fieldset {
+    padding:0 20px 20px 20px;
+    margin-bottom:10px;
+    border:1px solid;
+}
+legend {
+    color:#58CB8E;
+    width:inherit;
+}
+label {
+    margin-top:10px;
+    display:block;
+}
+label.inline {
+    display:inline;
+    margin-right:50px;
+}
+
+input, textarea, select {
+    padding:3px;
+    border-radius:5px;
+    width:400px;
+}
+select {
+    margin-top:10px;
+}
+input[type=radio] {
+    border:none;
+    width:10px;
+}
+input[type=submit], input[type=reset] {
+    width:100px;
+    margin-top:50px;
+    margin-left:5px;
+    cursor:pointer;
+    display:block;
+}
+.erreur {
+    width:399px;
+    padding:2px 4px;
+    margin:0px;
+    color:#CB4721;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;	
+}
+
+
+/*------------------------------------*\
+    MESSAGE
+\*------------------------------------*/
+
+
+.message {
+    padding:3rem 0;
+}
+.message a {
+    color:#58CB8E; 
+    text-decoration: underline;
+}
+.message p {
+    text-align:center;
+}
+
+/*------------------------------------*\
+    TABLE
+\*------------------------------------*/
+
+table, th, td, tr {
+    padding: 1rem;    
+}
+table {
+    margin:2rem;
+}
+

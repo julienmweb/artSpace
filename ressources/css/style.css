@@ -1,0 +1,1113 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * Mentions
+ * Base
+ * Helper class
+ * Layouts
+ * Pages
+ * Modules
+ */
+
+/*----------------------------------------------------------------------------*\
+    $MENTIONS
+\*----------------------------------------------------------------------------*/
+
+/* @autor : Julien Marciliac 
+/* @date :  june 2014
+/* @note: BEM syntax used
+/* @note: mobile first (INITAL / STATE)
+*/
+
+/*----------------------------------------------------------------------------*\
+    $BASE
+\*----------------------------------------------------------------------------*/
+/*-------------------------------*\
+    $BASE INITIAL
+\*-------------------------------*/        
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color : #FFF;
+    color: #7f7f7f;
+    font-family: 'Open Sans', sans-serif;
+}
+a{ 
+    color:inherit; 
+    text-decoration: none;
+}
+h1 {
+    margin-top:0.3rem;
+    margin-bottom:0.3rem;    
+    color:#FFF;
+    font-size:2rem;
+    font-weight: 600;
+}
+h2 {
+    color:#303030;
+    font-weight: 400;
+}
+h3{
+    color:#222222;
+    font-weight: 400;
+}
+p{
+    margin: 0;
+    padding: 0;
+}       
+
+.background--type1 {
+    background-color:#f5f5f5;
+    border-bottom: 1px solid #e4e4e4;
+}
+.title p {
+    line-height: 1.6rem;
+}
+.section__img {    
+    margin-top:2rem;    
+
+}
+.section__img img {
+    width: 100%;
+}
+
+/*-------------------------------*\
+    $BASE STATE
+\*-------------------------------*/
+
+@media (min-width: 768px) {
+
+    h1 {
+        font-size:3rem;
+    }
+    .title {
+        display:inline-block;
+    }
+    .section__img {
+        display:inline-block;
+    }
+} 
+
+
+/*----------------------------------------------------------------------------*\
+   $HELPER CLASS
+\*----------------------------------------------------------------------------*/
+
+.h2--tiny {
+    font-size:1.3rem;
+}
+.bold {
+    font-weight:bold;   
+}
+.boldAndColor {
+    font-weight:bold;
+    color:black;
+}
+.link {
+    color:#58CB8E;
+    text-decoration: underline;   
+}
+
+/*----------------------------------------------------------------------------*\
+    $LAYOUTS
+\*----------------------------------------------------------------------------*/
+
+/*---------------------------------------------------*\
+    $ LAYOUTS INITIAL
+\*---------------------------------------------------*/
+
+/*-------------------------------*\
+  LAYOUTS INITIAL Container
+\*-------------------------------*/
+
+.layout-container{
+    width: 95%;  
+    margin: 0 auto; 
+}
+.layout-container__page{
+    max-width:1265px;    
+}
+/*-------------------------------*\
+   LAYOUTS INITIAL Header
+\*-------------------------------*/
+
+.header {
+    margin-top:1.8rem;
+    text-align:center;
+}
+.header__logo {
+    line-height: 4rem;
+    width:100%;
+}
+.header__menu {
+    line-height: 4rem;  
+}
+.header__menu a {
+    display:block;
+    line-height: 2rem;
+    padding: 0 2% 0 2%;    
+    font-size:0.8rem;
+}
+.header__menu a:hover {
+    color:#65CF9A;  
+}
+
+/*-------------------------------*\
+    $ LAYOUTS INITIAL Footer
+\*-------------------------------*/
+
+.footer {
+    background-color: #181818;
+    text-align:center;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+.footer__content a {
+    line-height:2rem;
+    white-space:nowrap;    
+}
+.footer__content a:hover {
+    color:white;
+}
+.footer__content__blocks p {
+    color:#FFF;
+}
+.footer__content__blocks img {
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.footer .btn--type3{
+    font-size:1rem;
+    margin-top:2rem;
+}
+
+/*---------------------------------------------------*\
+    $LAYOUTS STATE
+\*---------------------------------------------------*/
+
+@media (min-width: 400px) {
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Header
+    \*-------------------------------*/     
+
+    .header__menu a {
+        display:inline-block;
+        line-height: 4rem;
+        padding: 0 1% 0 1%;    
+    }
+}
+@media (min-width: 768px) {
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Container
+    \*-------------------------------*/   
+
+    .layout-container{
+        width: 100%;
+    }
+    .layout-container__page{
+        display:inline-block;
+        width:77%;
+    }
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Header
+    \*-------------------------------*/     
+
+    .header__logo {
+        display:inline-block;
+        padding-left:11.85%;
+        width:29%;
+    }
+    .header__menu {
+        display:inline-block;
+        width: 70%;        
+        text-align:right;        
+    }   
+
+    /*-------------------------------*\
+        $ LAYOUTS STATE Footer
+    \*-------------------------------*/   
+
+    .footer__content__blocks {
+        display:inline-block;
+        width:24%;
+        vertical-align:top;
+        text-align:left;
+    }
+    .footer__content__blocks a {
+        display:block;
+        font-size: 0.8rem;        
+    }
+    .footer__content__blocks .btn--type3 {
+        margin-top:0;
+    } 
+}
+
+/*----------------------------------------------------------------------------*\
+    $PAGES
+\*----------------------------------------------------------------------------*/
+
+/*------------------------------------*\
+    $PAGES: INDEX
+\*------------------------------------*/
+
+/*-------------------------------*\
+    $PAGES: INDEX INITIAL
+\*-------------------------------*/
+
+.index h2 {
+    margin-top:0;
+}
+.index__part1,
+.index__part2,
+.index__part3,
+.index__part4,
+.index__part5,
+.index__part6,
+.index__part7,
+.index__part8,
+.index__part9,
+.index__part10,
+.index__part11 {
+    padding-top:5%;
+    text-align: center;
+}
+.index__part3,
+.index__part4,
+.index__part5,
+.index__part6,
+.index__part7,
+.index__part8,
+.index__part9,
+.index__part10 {
+    padding-bottom:5%;
+}
+
+.index__part3 .layout-container__page,
+.index__part4 .layout-container__page,
+.index__part5 .layout-container__page,
+.index__part6 .layout-container__page,
+.index__part7 .layout-container__page,
+.index__part8 .layout-container__page,
+.index__part9 .layout-container__page,
+.index__part11 .layout-container__page{
+    text-align: left;
+}
+
+/*----------------------------*\
+ PAGES: INDEX INITIAL PART 0
+\*----------------------------*/
+
+.index__part0 {    
+    text-align: center;
+}
+.index__part0 .hr--type2 {
+    margin-top:2rem;
+}
+.index__part0__header {
+    position:relative;
+    margin-top:1.80rem;
+    height: 33rem;    
+    background-image:url('../img/hero-tour-768.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align:center;
+    color:#FFF;   
+}
+.index__part0__header__baseline1 {
+    font-style:italic;
+}
+.index__part0__header__baseline2 img {    
+    margin-left:0.5%;
+    margin-bottom: 0.2rem;
+    opacity:0.8;
+}
+.index__part0__header__baseline2 a {
+    white-space:nowrap;
+}
+.index__part0__header__baseline3 {
+    padding-left: 1rem;
+    padding-right:2em;
+    text-align: right;
+    border-right: 2px solid #FFF;
+    border-color:#FFF;
+    font-size:0.7rem;
+}
+.index__part0__footer span, .index__part0__footer img {
+    text-align:center;
+    opacity:0.5;    
+    padding-right:2.40%;
+    line-height: 3rem;
+}
+
+.index__part0__header__baseline3 {
+    position:absolute;
+    top:90%;
+    right:2rem;
+} 
+/*----------------------------*\
+  PAGES: INDEX INITIAL PART 1
+\*----------------------------*/
+.index__part1 {
+    padding-bottom:4.2%;
+}
+.index__part1__slider {
+    width:100%;
+    margin-top: 3.75rem;
+}
+.index__part1__slider .MainPic { 
+    width: 100%; 
+}
+.index__part1__slider .lightbox__mainPic {
+    padding:1rem;    
+}
+
+/*----------------------------*\
+    $PAGES: INDEX INITIAL PART 5
+\*----------------------------*/
+
+.index__part5__slider {
+    margin-top: 3.75rem;
+}
+.index__part5__slider p {
+    padding-left:5%;
+    font-size:0.8rem;
+    font-style:italic;
+}
+.index__part5__slider .lightbox {
+    background-image: url('../img/sqsp-browser-yourbrand.png'), url('../img/sqsp-browser-yourbrand.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    padding-top:4%;
+    padding-bottom:2%;
+    background-position:left top, left bottom;
+}
+.index__part5__content__blocks__logo {
+    margin-top:2rem;
+}
+.index__part5__content__blocks__logo img {
+    padding-right:1%;
+    opacity:0.5;
+}
+
+/*----------------------------*\
+ $PAGES: INDEX INITIAL PART 7
+\*----------------------------*/
+
+.index__part7 .title{
+    vertical-align: middle;    
+}
+
+/*----------------------------*\
+  $PAGES: INDEX INITIAL PART 8
+\*----------------------------*/
+
+.index__part8 .section__img {
+    vertical-align:top;
+}
+.index__part8__content {
+    margin-top:10%;
+}
+
+/*----------------------------*\
+  $PAGES: INDEX INITIAL PART 10
+\*----------------------------*/
+
+.index__part10 .section__img {
+    background-image: url('../img/sqsp-browser-yourbrand.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    padding-top:4.5%;
+    background-position:left top;
+}
+
+/*----------------------------*\
+  $PAGES: INDEX INITIAL PART 11
+\*----------------------------*/
+
+.index__part11__CEO {
+    position:relative;
+    margin: 2rem 5% 3rem 5rem;
+    line-height: 4.375rem;
+    background-color:#58cb8e;
+}
+.index__part11__CEO > img:first-child{
+    position:absolute;
+    top:-1rem;
+    left:-5rem;
+    border-radius:50%;   
+}
+.index__part11__CEO p { 
+    color:white;
+}
+.index__part11__CEO  p:first-of-type { 
+    margin-left:2rem;
+}
+.index__part11__content .index__part11__content__blocks:nth-of-type(4) .title{
+    position:relative;
+}  
+.index__part11__content__blocks .sticker--type1 {
+    left:15rem;
+}
+blockquote {
+    position:relative;
+}
+blockquote::before{
+    content: "\201C"; /*Unicode for Left Double Quote*/
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+    /*Positioning*/
+    position: absolute;
+    left: -2rem;
+    top:-1.5rem;
+}
+
+/*------------------------------------*\
+    $PAGES: INDEX STATE
+\*------------------------------------*/
+
+@media (min-width: 768px) {
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 0
+    \*----------------------------*/
+
+    .index__part0__header {
+        height: 41rem;
+        background-image:url('../img/hero-tour.jpg');
+    } 
+    .index__part0 .hr--type2 {
+        margin-top:11rem;
+    }
+    .index__part0__footer span, .index__part0__footer img {
+        line-height: 6.25rem;
+    }    
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 1
+    \*----------------------------*/
+
+    .index__part1 .title {
+        width:80%;
+    }     
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 2
+    \*----------------------------*/  
+
+    .index__part2 .title {
+        width:60%;
+    } 
+    .index__part2 .section__img {
+        width:90%;    
+    }
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 3
+    \*----------------------------*/  
+
+    .index__part3 .title {
+        width:60%;
+        display:inline-block;
+    } 
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 4
+    \*----------------------------*/ 
+
+    .index__part4 .title {
+        width:70%;
+    } 
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 5
+    \*----------------------------*/ 
+
+    .index__part5 .title {
+        width:60%;
+    }
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 6
+    \*----------------------------*/
+    .index__part6 .title {
+        width:60%;
+    }  
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 7
+    \*----------------------------*/
+
+    .index__part7 .title {
+        width:37%;
+    }
+    .index__part7 .section__img {
+        padding-left:5%;
+        width:62%;        
+    }
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 8
+    \*----------------------------*/
+
+    .index__part8 .section__img {
+        width:60%;  
+    }
+    .index__part8__content {
+        display:inline-block;
+        width:39%;
+    }
+    .index__part8 .title {
+        width:60%;
+    } 
+    .index__part8__content__blocks {
+        padding-left:8%;
+    }   
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 9
+    \*----------------------------*/
+    .index__part9 .section__img {
+        width: 50%;  
+    }
+    .index__part9 .title {
+        width:49%;
+        padding-left:5%;
+    }  
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 10
+    \*----------------------------*/
+    .index__part10 .title {
+        width:60%;
+    }
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 11
+    \*----------------------------*/
+
+    .index__part11__content__blocks {
+        display:inline-block;
+        vertical-align: top;
+        width:47%;        
+    }
+    .index__part11__content__blocks:first-child{
+        margin-right:5%;
+    }     
+    .index__part11__content__blocks:nth-child(3){
+        margin-right:5%;
+        margin-top:5rem;
+    } 
+    .index__part11__content__blocks:nth-child(4){
+        margin-top:5rem;       
+    } 
+    .index__part11__content__blocks .sticker--type1 {
+        top:1rem;
+    } 
+}
+@media (min-width: 992px) {
+
+    /*----------------------------*\
+        $PAGES: INDEX STATE PART 5
+    \*----------------------------*/   
+
+    .index__part5__content__blocks {
+        display:inline-block;
+        width:32.5%;
+        vertical-align:top;    
+        padding-left:1.5%;
+        padding-right:1.5%;
+    } 
+}
+
+/*------------------------------------*\
+   $PAGES: PRICING
+\*------------------------------------*/ 
+
+/*-------------------------------*\
+    $PAGES: PRICING INITIAL
+\*-------------------------------*/         
+
+.pricing h2 {
+    color:#FFF;
+    letter-spacing: 0.4rem;
+}
+.pricing .hr--type2 {
+    margin-top:2rem;
+}
+.pricing__details {
+    position:relative;    
+    background-color: #f7f7f7;
+    margin:0;
+    padding:0;
+    text-align:center;    
+}
+.pricing__details .tooltip--customDomain {
+    position:relative;
+}
+.pricing__details li {
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    line-height:2.8rem;    
+    border-bottom: 1px solid #e4e4e4;
+    display:block;
+    padding-left:10%;
+    text-decoration: none;
+    text-align:left;
+}
+.bigNumber {
+    font-size:5.5rem;
+    position:relative;
+}
+.bigNumber::before{
+    content: "\0024"; /*Unicode for Left Double Quote*/
+    font-family: "Times New Roman";
+    font-size: 1.5rem; 
+    position: absolute;
+    left: -1rem;
+    top:0.5rem;
+}
+.pricing__part0 {
+    margin-top:1.80rem;
+    background-image:url('../img/hero-pricing-768.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align:center;
+    color:#FFF;
+}
+.pricing__part1 {
+    text-align:center;
+    padding-top:4.3rem;
+    padding-bottom:4.3rem;  
+}
+.pricing__part1__header {
+    background-color:#191919;
+    color:#FFF;
+    padding-bottom:2rem;
+}
+.pricing__part1__content>p:last-child {
+    color:#7f7f7f;
+    font-style: italic;    
+}
+.pricing__part1 .layout-container__page, .pricing__part2 .layout-container__page {
+    text-align: left;
+}
+.pricing__part1 .layout-container__page .pricing__part1__standard, .pricing__part1 .layout-container__page .pricing__part1__unlimited {
+    text-align: center;
+}
+.pricing__part1__unlimited {
+    position:relative;
+}
+.pricing__part1__unlimited .sticker--type3 {
+    left: 77%;
+    top: -1rem;
+}
+.pricing__part1 .sticker--type2 {
+    top:0.5rem;
+    left:12rem;
+}
+.pricing__part1 .layout-container__page {
+    text-align:center;
+}
+.pricing__part1__standard {
+    margin: 2% 4% 2% 0;
+}
+.pricing__part2 {
+    text-align:center;
+    padding-bottom:4.3rem; 
+}
+.pricing__part2 a {
+    color:#65cf9a;
+}
+.tooltip--galleries,.tooltip--bandwidth, .tooltip--storage,.tooltip--customDomain {
+    position:relative;
+}
+
+
+
+/*-------------------------------*\
+    $PAGES: PRICING STATE
+\*-------------------------------*/            
+
+
+@media (min-width: 768px) {
+    .pricing .layout-container__page {
+        padding-left:4%;
+    } 
+    .pricing__part0 {
+        /*        height: 30rem;*/
+        background-image:url('../img/hero-pricing.jpg');
+    }    
+    .pricing .hr--type2 {
+        margin-top:1rem;
+    }
+    .pricing__part1__standard {
+        display:inline-block;
+        width:45%;
+        margin-right:4%;
+        vertical-align: top;
+    }
+    .pricing__part1__unlimited {
+        display:inline-block;
+        width:45%;
+        vertical-align: top;
+    } 
+    .pricing__part2__element {
+        display:inline-block;
+        margin-right:4%;
+        width:45%;
+    }
+    .pricing__part1__unlimited .sticker--type3 {
+        top:-2rem;
+        left:90%;
+    }
+    .tooltip--infoMobile {
+        display:none;
+    }
+}      
+
+/*------------------------------------*\
+    $PAGES:  PANIER / MY ACCOUNT
+\*------------------------------------*/
+
+/*-------------------------------*\
+    $PAGES: PANIER / MY ACCOUNT INITIAL
+\*-------------------------------*/
+
+.panier, .myAccount {
+    width:80%;
+    margin:1rem auto 1rem;
+}
+
+.panier p, .myAccount p {
+    font-weight:bold;
+    text-align:center;
+    margin:1rem;
+}
+.panier table, .myAccount table {
+    margin:auto;
+}
+
+.myAccount a {
+    color:#58CB8E;
+    text-decoration: underline;
+}
+
+.message--panier {
+    margin:1rem;
+    color: #65CF9A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;    
+}
+
+.message {
+    padding:3rem 0;
+}
+.message a {
+    color:#58CB8E; 
+    text-decoration: underline;
+}
+.message p {
+    text-align:center;
+}
+.menuRubrique li {
+    display:inline-block;
+}
+.menuRubrique a {
+    width:200px;
+    margin:1rem;    
+}
+
+/*----------------------------------------------------------------------------*\
+    $MODULES
+\*----------------------------------------------------------------------------*/
+
+/*-----------------------------------------*\
+    $MODULES INITIAL
+\*-----------------------------------------*/
+
+/*------------------------------------*\
+    MODULES INITIAL hr
+\*------------------------------------*/
+
+.hr, .hr--type1, .hr--type2, .hr--type3, .hr--type4 {
+    display:inline-block;
+    border-radius:3px;
+    margin-top:0;
+}
+.hr--type1 {
+    height: 0.15rem; 
+    width:40%;    
+    background-color:#303030;    
+}
+.hr--type2 {
+    height: 0.31rem;
+    width:24.58%;       
+    background-color: #FFF;
+}
+.hr--type3 {
+    height: 0.2rem;
+    width:100%;   
+    background-color: #000;
+}
+.hr--type4 {
+    height: 0.15rem;
+    width:100%;   
+    background-color: #FFF;
+}
+
+/*------------------------------------*\
+    MODULES INITIAL tooltip
+\*------------------------------------*/
+
+.tooltip--info {
+    position:relative;    
+}
+.tooltip--info::before{
+    content: "\0069";
+    /*Font*/
+    font-family: "Times New Roman";
+    font-style:italic;
+    font-size: 2rem;
+    font-weight: bold;
+    /*Positioning*/
+    position: absolute;
+    left: -2rem;
+    top:1rem;
+}
+.tooltipster-default {
+    background-color: #191919;
+    background-color: rgba(25, 25, 25, 0.9);
+    max-width:90%;
+}
+.tooltip--infoMobile {
+    font-family: "Times New Roman";
+    font-style:italic;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align:left;
+    position:absolute;
+    color:black;
+    left:4%;      
+}
+/*------------------------------------*\
+    MODULES INITIAL sticker
+\*------------------------------------*/
+
+.sticker, .sticker--type1,.sticker--type2, .sticker--type3 {
+    display:inline-block;
+    position:absolute;
+    background-color: #58cb8e;
+    color:white;
+    font-size:0.6rem;
+    font-weight: bold;
+}
+.sticker--type1 {
+    padding:0.5rem 0.8rem 0.5rem 0.8rem;    
+    border-radius:3px;   
+}
+.sticker--type2 {
+    padding:0 0.7rem 0 0.7rem;
+    border-radius:50%; 
+}
+.sticker--type3 {
+    padding:1.4rem 0.8rem 1.4rem 0.8rem;
+    border-radius:50%;   
+}
+
+/*------------------------------------*\
+    MODULES INITIAL lightbox
+\*------------------------------------*/
+
+.lightbox {
+    position:relative;
+    width:90%;
+    margin:auto;
+}
+.lightbox__leftArrow {
+    position:absolute;
+    left:-5%;
+    top:45%;
+    opacity:0.5;
+}
+.lightbox__rightArrow {
+    position:absolute;
+    right:-5%;
+    top:45%;
+    opacity:0.5;
+}
+.lightbox__cadre {
+    position:absolute;
+    width: 100%;
+}
+.lightbox__mainPic {
+    width:100%;    
+}
+
+/*------------------------------------*\
+    MODULES INITIAL Btn
+\*------------------------------------*/
+
+.btn, .btn--type1,.btn--type2, .btn--type3, .btn--type4, .btn--type5  {
+    display:inline-block;        
+    border-radius:40px;    
+    margin-bottom:2rem;
+    margin-right:2%;
+    transition: background-color 1s;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-align:center;
+    cursor: pointer; 
+}
+.btn:hover, .btn--type1:hover,.btn--type2:hover, .btn--type3:hover, .btn--type4:hover, .btn--type5:hover  {
+    background-color:#65CF9A;    
+}
+.btn--type1 {
+    padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+    margin-top:3rem;
+    color:black; 
+    background-color: #fff186;
+}
+.btn--type2 {
+    padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+    margin-top:3rem;
+    color:white;
+    background-color: #1c1c1c;
+}
+.btn--type2 a {
+    padding: 1.3rem 2.2rem 1.3rem 2.2rem;
+}
+.btn--type3 {
+    padding: 1.3rem 1.2rem 1.3rem 1.2rem;
+    color:black;
+    background-color: #e6e6e6;
+}
+.btn--type4 {
+    padding:1rem;
+    color:black;
+    background-color: #CB4721;
+}
+.btn--type5 {
+    padding:1rem;
+    color:black;
+    background-color: #e6e6e6;
+}
+
+/*------------------------------------*\
+    MODULES INITIAL Table
+\*------------------------------------*/
+
+table { 
+    width: 80%; 
+    border-collapse: collapse; 
+}
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
+th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+}
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
+
+
+/*------------------------------------*\
+    MODULES INITIAL Form
+\*------------------------------------*/
+
+form {
+    padding:10px;
+    width:500px;
+    margin:auto;
+}
+fieldset {
+    padding:0 20px 20px 20px;
+    margin-bottom:10px;
+    border:1px solid;
+}
+legend {
+    color:#58CB8E;
+    font-weight:bold
+}
+label {
+    margin-top:10px;
+    display:block;
+}
+label.inline {
+    display:inline;
+    margin-right:50px;
+}
+
+input, textarea, select {
+    padding:3px;
+    border-radius:5px;
+    width:400px;
+}
+select {
+    margin-top:10px;
+}
+input[type=radio] {
+    border:none;
+    width:10px;
+}
+input[type=submit], input[type=reset] {
+    width:100px;
+    margin-top:50px;
+    margin-left:5px;
+    cursor:pointer;
+    display:block;
+}
+.erreur {
+    width:399px;
+    padding:2px 4px;
+    margin:0px;
+    /*border:solid 1px #FBD3C6; */
+    /* background:#FDE4E1;*/
+    color:#CB4721;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;	
+}
+
+/*-----------------------------------------*\
+    $MODULES STATE
+\*-----------------------------------------*/
+
+@media (min-width: 768px) {
+
+    /*------------------------------------*\
+        MODULES STATE lightbox
+    \*------------------------------------*/
+
+    .lightbox__lightbox {
+        width:100%;
+    }
+
+    /*------------------------------------*\
+        MODULES STATE tooltip
+    \*------------------------------------*/
+
+    .tooltipster-default {
+        max-width:35%;
+    }   
+}
+
+

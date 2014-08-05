@@ -1,0 +1,252 @@
+<?php
+
+require_once ('classautoload.php');
+session_start();
+require_once ('modele/connexion_sql.php');
+
+if (isset($_POST['action'])) {
+	$action = $_POST['action'];
+} else if (isset($_SESSION['identifiant'])) {
+	$action = "vueindexorganisateur";
+
+} else {
+	$action = "vuedebut";
+}
+//
+if (isset($_GET['action'])) {
+	$action = $_GET['action'];
+}
+
+switch($action) {
+	case "vuedebut" :
+		require ("vue/index.php");
+		break;
+
+	////////////////////////////////////////// CONTROLEURS
+
+	case "controleurvalidationinscription":
+		/*if (isset($_GET['login'])) {
+			$_SESSION['login'] = $_GET['login'];
+		}
+		if (isset($_GET['cle'])) {
+			$_SESSION['cle'] = $_GET['cle'];
+		}		*/	
+
+		require ("controleur/controleurvalidationinscription.php");
+		break;
+	
+	
+	case "controleurinscription" :
+		require ("controleur/controleurinscription.php");
+		break;
+
+	case "controleurconnexion" :
+		require ("controleur/controleurconnexion.php");
+		break;
+		
+	case "controleuruserpassreset" :
+		require ("controleur/controleuruserpassreset.php");
+		break;
+		
+	case "controleurvalidationpassreset":
+		require ("controleur/controleurvalidationpassreset.php");
+		break;
+		
+	case "controleurmajpass"	:
+		require ("controleur/controleurmajpass.php");
+		break;
+		
+	case "controleuruseridlost"	:
+		require ("controleur/controleuruseridlost.php");
+		break;	
+		
+	case "controleurlistemilonga":
+		require ("controleur/controleurlistemilonga.php");
+		$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+		echo $arr;
+		break;
+		
+
+
+		//MILONGA
+
+	case "controleurajoutmilonga" :
+		require ("controleur/controleurmilonga.php");
+		break;
+
+	case "controleuraffichermodifiermilonga" :
+		if (isset($_GET['id'])) {
+			$_SESSION['idmilonga'] = $_GET['id'];
+		}
+		require ("controleur/controleuraffichermodifiermilonga.php");
+		break;
+
+	case "controleuraffichermilonga" :
+		if (isset($_GET['id'])) {
+			$_SESSION['idmilonga'] = $_GET['id'];
+		}
+		require ("controleur/controleuraffichermilonga.php");
+		break;
+
+	case "controleurmajmilonga" :
+		require ("controleur/controleurmajmilonga.php");
+		break;
+
+	case "controleursupprimermilonga" :
+		if (isset($_GET['id'])) {
+			$_SESSION['idmilonga'] = $_GET['id'];
+		}
+		require ("controleur/controleursupprimermilonga.php");
+		break;
+
+		//STAGE
+
+	case "controleurajoutstage" :
+		require ("controleur/controleurstage.php");
+		break;
+
+		//COURS
+		
+
+	case "controleurajoutcours" :
+		$_SESSION['ajoutcours']=true;
+		
+		require ("controleur/controleurcours.php");
+		break;
+		
+	case "controleurmajcours" :
+		$_SESSION['majcours']=true;
+		
+		require ("controleur/controleurcours.php");
+		break;		
+		
+		
+		
+	case "controleuraffichercours" :
+		if (isset($_GET['idcours'])) {
+			$_SESSION['idcours'] = $_GET['idcours'];
+		}
+		if (isset($_GET['idjourscours'])) {
+			$_SESSION['idjourscours'] = $_GET['idjourscours'];
+		}		
+		require ("controleur/controleuraffichercours.php");
+		break;
+		
+	case "controleuraffichermodifiercours" :
+		if (isset($_GET['id'])) {
+			$_SESSION['idcours'] = $_GET['id'];
+		}
+		require ("controleur/controleuraffichermodifiercours.php");
+		break;		
+		
+	case "controleursupprimercours" :
+		if (isset($_GET['id'])) {
+			$_SESSION['idcours'] = $_GET['id'];
+		}
+		require ("controleur/controleursupprimercours.php");
+		break;		
+		
+		
+		
+		
+		
+		
+		
+						
+		
+
+		//SESSION DESTROY
+
+	case "controleursessiondestroy" :
+		require ("controleur/sessiondestroy.php");
+		break;
+
+	////////////////////////////////////////////////////// VUES
+
+	case "vueinscription" :
+		require ("vue/inscription.php");
+		break;
+
+	case "vueconnexion" :
+		require ("vue/connexion.php");
+		break;
+
+	case "vueespaceorganisateur" :
+		require ("vue/espaceorganisateur.php");
+		break;
+
+	case "vueindexorganisateur" :
+		if (isset($_SESSION['identifiant'])){
+			require ("vue/indexorganisateur.php");
+		} else {
+			require ("vue/index.php");	
+		}
+		break;
+		
+	case "vueuserpassreset"	:
+		require ("vue/userpassreset.php");
+		break;	
+		
+	case "vuemajpass":
+		require ("vue/majpass.php");
+		break;
+
+	case "vueuseridlost":
+		require ("vue/useridlost.php");
+		break;
+
+		//MILONGA
+
+	case "vueajoutermilonga" :
+		require ("vue/ajoutermilonga.php");
+		break;
+
+	case "vueaffichermodifiermilonga" :
+		require ("vue/affichermodifiermilonga.php");
+		break;
+
+	case "vueaffichermilonga" :
+		require ("vue/affichermilonga.php");
+		break;
+
+		//COURS
+
+	case "vueajoutercours" :
+		require ("vue/ajoutercours.php");
+		break;
+		
+	case "vuecours" :		
+		require ("vue/cours.php");
+		break;	
+
+	case "vuecoursorganisateur" :
+		if (isset($_SESSION['identifiant'])){
+		require ("vue/coursorganisateur.php");
+		} else {
+		require ("vue/cours.php");	
+		}
+		break;		
+		
+				
+	case "vueaffichercours" :
+		require ("vue/affichercours.php");
+		break;	
+		
+	case "vueaffichermodifiercours" :
+		require ("vue/affichermodifiercours.php");
+		break;		
+		
+		
+					
+
+		//STAGE
+
+	case "vueajouterstage" :
+		require ("vue/ajouterstage.php");
+		break;
+
+	default :
+		require ("404.php");
+}
+?>
+<script language="javascript" src="http://code.jquery.com/jquery-latest.min.js">
